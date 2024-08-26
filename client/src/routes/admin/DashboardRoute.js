@@ -1,13 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Sidebar from "../../pages/admin/layout/Sidebar";
-import Brand from "../../pages/admin/brand/Brand";
+import Course from "../../pages/admin/course/Course";
 
 const DashboardRoute = () => {
   return (
     <Routes>
-      <Route path="/dashboard" element={<Sidebar />} />
-      <Route path="/brand" element={<Brand />} />
+      <Route path="/dashboard" element={
+        <>
+          <Course />
+        </>
+      } />
     </Routes>
   );
 };

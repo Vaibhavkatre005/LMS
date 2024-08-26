@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../../assets/css/Sidebar.css";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -34,24 +35,24 @@ const Sidebar = () => {
               {activeDropdown === "course" && (
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="#">
+                    <NavLink to={"/course"}>
                       <i class="fa-solid fa-caret-right"></i>Manage Course
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#">
+                    <NavLink to={"/add-course"}>
                       <i class="fa-solid fa-caret-right"></i>Add New Course
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#">
+                    <NavLink to={"/course-category"}>
                       <i class="fa-solid fa-caret-right"></i>Course Category
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#">
+                    <NavLink to={"/coupon"}>
                       <i class="fa-solid fa-caret-right"></i>Coupons
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               )}
@@ -138,14 +139,14 @@ const Sidebar = () => {
               {activeDropdown === "setting" && (
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="#">
+                    <NavLink to={"/payment-setting"}>
                       <i class="fa-solid fa-caret-right"></i>Payment Setting
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#">
+                    <NavLink to={"/notification-setting"}>
                       <i class="fa-solid fa-caret-right"></i>Notification Setting
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               )}
